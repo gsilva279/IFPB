@@ -1,0 +1,1 @@
+#6. Verifique se um número digitado é par ou ímpar.
