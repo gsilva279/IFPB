@@ -9,5 +9,12 @@ while contador < 3:
     contador += 1
 
 media = soma/3
-print(nota)
 
+if media >= 7:
+    print(f"Aprovado")
+elif media >= 5 and media <= 6.9:
+    print(f"Recuperação")
+elif media < 5:
+    print(f"Reprovado")
+else:
+    print("Valor inválido, informe outro valor")

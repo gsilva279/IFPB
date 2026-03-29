@@ -1,0 +1,178 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                        COLINHA GIT                              ║
+║              do iniciante ao proficiente                        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ FLUXO DE TRABALHO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [Working Dir] --git add--> [Stage] --git commit--> [Local] --git push--> [Remoto]
+  [Remoto] --git fetch--> [Local] --git merge--> [Working Dir]
+  (git pull = fetch + merge)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ CONFIGURAÇÃO INICIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git config --global user.name "Seu Nome"
+  git config --global user.email "email@exemplo.com"
+  git config --global core.editor "code --wait"   # VS Code como editor
+  git config --list                                # lista todas as configs
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ CRIAR E CLONAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git init                        # inicia repo na pasta atual
+  git init <nome-pasta>           # cria pasta e inicia repo
+  git clone <url>                 # clona repositório remoto
+  git clone <url> <nome>          # clona e renomeia a pasta
+  git remote add origin <url>     # conecta repo local a um remoto
+  git remote -v                   # lista remotos configurados
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ STATUS E HISTÓRICO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git status                      # mostra estado do repositório
+  git log                         # histórico completo (tecle q para sair)
+  git log --oneline               # histórico resumido (hash + mensagem)
+  git log --oneline --graph --all # visualiza branches em árvore [ÚTIL]
+  git diff                        # alterações não staged
+  git diff --staged               # alterações no stage (prontas para commit)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ STAGE E COMMIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git add <arquivo>               # adiciona arquivo específico ao stage
+  git add .                       # adiciona TUDO ao stage
+  git add -p                      # escolhe trechos interativamente [PRO]
+  git commit -m "mensagem"        # cria commit com mensagem
+  git commit --amend              # edita o último commit [CUIDADO]
+  git restore <arquivo>           # descarta alterações locais (não staged)
+  git restore --staged <arquivo>  # tira do stage sem perder mudanças
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ BRANCHES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git branch                      # lista branches locais
+  git branch <nome>               # cria nova branch
+  git switch <nome>               # muda para outra branch
+  git switch -c <nome>            # cria e já muda para a branch [ÚTIL]
+  git branch -d <nome>            # deleta branch já mergeada
+  git branch -D <nome>            # força deleção sem merge [PERIGO]
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ MERGE E REBASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git merge <branch>              # integra branch na branch atual
+  git merge --no-ff <branch>      # merge com commit explícito (preserva histórico)
+  git rebase <branch>             # reescreve commits sobre outra branch [AVANÇADO]
+  git rebase -i HEAD~N            # edita interativamente os últimos N commits [PRO]
+  git cherry-pick <hash>          # aplica um commit específico na branch atual
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ SINCRONIZAR COM REMOTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git fetch origin                      # baixa mudanças SEM aplicar localmente
+  git pull origin <branch>              # baixa e aplica (fetch + merge)
+  git pull --rebase origin <branch>     # pull com rebase — histórico mais limpo [RECOMENDADO]
+  git push origin <branch>             # envia commits para o remoto
+  git push -u origin <branch>          # push + vincula branch (primeira vez)
+  git push --force-with-lease          # force push seguro [CUIDADO]
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ DESFAZER E RECUPERAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git revert <hash>               # desfaz commit criando um novo (seguro)
+  git reset --soft HEAD~1         # desfaz commit, mantém arquivos no stage
+  git reset --mixed HEAD~1        # desfaz commit e stage, mantém no disco
+  git reset --hard HEAD~1         # apaga tudo do último commit [PERIGO]
+  git reflog                      # histórico de TUDO — recupera commits perdidos [SALVA-VIDAS]
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ STASH — GUARDAR TEMPORÁRIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git stash                       # guarda alterações locais sem commitar
+  git stash push -m "descrição"   # guarda stash com nome
+  git stash list                  # lista todos os stashes
+  git stash pop                   # restaura o stash mais recente
+  git stash drop stash@{N}        # remove stash específico da lista
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ TAGS E VERSÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  git tag                             # lista todas as tags
+  git tag v1.0.0                      # cria tag leve no commit atual
+  git tag -a v1.0.0 -m "Release 1.0" # cria tag anotada (recomendado)
+  git push origin --tags              # envia todas as tags para o remoto
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ .GITIGNORE — SINTAXE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  # comentário (ignorado pelo git)
+  *.log          → ignora todos os arquivos .log
+  node_modules/  → ignora pasta inteira
+  .env           → ignora arquivo de variáveis de ambiente
+  dist/          → ignora pasta de build
+  .DS_Store      → macOS
+  Thumbs.db      → Windows
+  .vscode/       → configurações do editor
+  !importante.log → EXCEÇÃO: não ignora este arquivo específico
+
+  Dica: use gitignore.io para gerar .gitignore pela linguagem/framework
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ FLUXO DIÁRIO COMPLETO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. git pull origin main                     # sincronize antes de começar
+  2. git switch -c feature/minha-feature      # crie uma branch para a tarefa
+  3. ... faça suas alterações ...
+  4. git add .                                # adicione tudo ao stage
+  5. git commit -m "feat: descrição clara"    # commit com mensagem semântica
+  6. git push -u origin feature/minha-feature # envie e vincule ao remoto
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ COMMITS SEMÂNTICOS (padrão do mercado)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  feat:     nova funcionalidade
+  fix:      correção de bug
+  docs:     alterações na documentação
+  refactor: refatoração sem mudança de comportamento
+  style:    formatação, espaços, ponto-e-vírgula
+  test:     adição ou correção de testes
+  chore:    tarefas gerais (build, configs, etc.)
+
+  Exemplo: git commit -m "feat: adiciona tela de login com validação"
+
+╔══════════════════════════════════════════════════════════════════╗
+║  [PERIGO]      = pode causar perda de dados                     ║
+║  [CUIDADO]     = use com consciência                            ║
+║  [RECOMENDADO] = boa prática                                    ║
+║  [PRO]         = comando avançado, muito útil                   ║
+║  [SALVA-VIDAS] = use quando der ruim                            ║
+╚══════════════════════════════════════════════════════════════════╝
