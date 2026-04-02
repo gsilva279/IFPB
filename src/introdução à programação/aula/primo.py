@@ -1,1 +1,0 @@
-#Verificar se o número informado é primo
