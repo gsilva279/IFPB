@@ -1,13 +1,9 @@
 #13.Calcule o fatorial de um número usando while.
-# 4! = 4*3*2*1 = 120
+fatorial = int(input("Informe um número para saber seu fatorial (n!): "))
+cont = fatorial - 1 
 
-numero = int(input("Informe um número para calcular o fatorial: "))
-contador = numero - 1 #3
-fatorial = 0
+while cont > 0:
+        fatorial = fatorial * cont
+        cont -= 1
 
-while contador > 0:
-    fatorial = numero * contador
-    contador -= 1
-    numero = fatorial
-
-print(f"O fatorial do número {numero} é {fatorial}")
+print(f"O fatorial do número infromado é: {fatorial}")
