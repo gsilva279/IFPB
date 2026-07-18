@@ -1,1 +1,0 @@
-#22. Dada uma lista de números, encontre o maior e o menor sem usar max()/min().
