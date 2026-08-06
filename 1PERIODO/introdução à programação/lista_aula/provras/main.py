@@ -14,10 +14,10 @@ while True:
     
     match opcao:
         case "1":
-            cpf = input("CPF: ")
+            cpf = input("CPF: ").strip()
             nome = input("Nome: ")
             endereco = input("Endereço: ")
-            fd.adicionarCadastro(cpf, nome, endereco)
+            print(fd.adicionarCadastro(cpf, nome, endereco))
         case "2":
             cpf = input("CPF: ")
             fd.removerCadastro(cpf)

@@ -9,8 +9,9 @@ def validarCPF(cpf):
 
 def adicionarCadastro(cpf, nome, endereco):
     if validarCPF(cpf) and cpf not in bancodedados:
-        bancodedados[cpf] = {"nome": nome, "endereço": endereco }
+        bancodedados[cpf] = {"nome": nome, "endereço": endereco}
         return cpf + " cadastrado com sucesso!!!"
+        print(bancodedados)
     else:
         return "CPF inválido ou já cadastrado!!!" 
         
