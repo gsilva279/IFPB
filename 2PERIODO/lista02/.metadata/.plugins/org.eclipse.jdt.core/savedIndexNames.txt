@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/home/gsilva/Área de trabalho/code/java/eclipse-code/.metadata/.plugins/org.eclipse.jdt.core
+1568060524.index
+1308026331.index
+1865797976.index

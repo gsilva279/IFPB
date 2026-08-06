@@ -1,15 +1,15 @@
-
-
 Prova - Terceira fase
 
 1. (100,0)
 Você, como desenvolvedor de software, precisa implementar um programa em Python que cadastre os seguintes dados dos clientes de uma Loja de Roupas: Nome, CPF e Endereço.
 O cadastro deve ser implementado usando a estrutura de dados dicionário.
 O buffer (retentor) é uma região de memória física utilizada para armazenar temporariamente os dados enquanto eles estão sendo movidos de um lugar para outro. Em sistemas de impressoras, o buffer é usado por softwares gerenciadores para criar uma fila de impressão dos arquivos que vão sendo enviados, pois só é possível imprimir um arquivo por vez. Desta maneira, o primeiro arquivo a entrar na fila de impressão será o primeiro a ser impresso.
+
 REGRAS
 A.
 O programa a ser desenvolvido deve dar suporte à impressão dos cadastros de clientes da loja em uma impressora matricial. Para possibilitar que esta máquina funcione corretamente é preciso implementar no software de cadastro (aquele que você vai implementar em Python) uma fila de impressão.
 Sempre que um cadastro sair da fila de impressão, por ter sido enviado para a impressora, o programa deve exibir na stdout o cadastro enviado para a impressora, por exemplo:
+
 >> 2 - Enviado para impressão:
 Nome: Maria Florzinha
 CPF: 05217786500
@@ -24,12 +24,12 @@ B.
 Crie um dicionário denominado bancodedados, que acomodará o cadastro de clientes.
 Crie também uma fila denominada filadeimpressao usando uma lista, que acomodará identificadores para os cadastros que serão impressos.
 As seguintes funções deverão ser criadas para possibilitar o gerenciamento destas estruturas de dados (lista e dicionário):
-adicionarCadastro
-removerCadastro
-obterCadastroPorCPF
-adicionarCPFFila
-removerCPFFila
-obterFilaImpressao
+- adicionarCadastro
+- removerCadastro
+- obterCadastroPorCPF
+- adicionarCPFFila
+- removerCPFFila
+- obterFilaImpressao
 Essas funções não podem possuir print. Todas as exibições de texto usando print devem ocorrer somente na rotina principal do software, que acessará, quando necessário, estas funções.
 Outras funções podem ser criadas de acordo com a necessidade do desenvolvedor, por exemplo, validarCadastroPorCPF para saber se um cadastro já existe no dicionário, passando o CPF do cliente para a função.
 
