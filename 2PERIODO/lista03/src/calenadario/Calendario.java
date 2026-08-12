@@ -33,6 +33,7 @@ public class Calendario {
 				break;
 		}
 		
+		input.close();
 		System.out.println(mes + " tem " + resultado + " dias.");
 	}
 }
