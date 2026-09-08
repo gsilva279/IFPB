@@ -1,0 +1,5 @@
+package ProjetoImposto;
+
+public enum TipoDeConta {
+	 CORRENTE, POUPANCA, SALARIO;
+}
