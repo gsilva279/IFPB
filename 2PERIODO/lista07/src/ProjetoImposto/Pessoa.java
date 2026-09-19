@@ -5,6 +5,12 @@ public class Pessoa {
 	private String nome;
 	private int anoNascimento;
 	
+	
+	public Pessoa(String nome, int anoNascimento) {
+		this.nome = nome;
+		this.anoNascimento = anoNascimento;
+	}
+	
 	public void setNome(String s) {
 		nome = s;
 	}

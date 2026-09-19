@@ -1,0 +1,10 @@
+livro, objeto usado para leitura e estudo
+hospital, local onde pacientes recebem tratamento médico
+caneta, instrumento utilizado para escrever com tinta
+carro, veículo automotor usado para transporte terrestre
+computador, dispositivo eletrônico para processar dados e navegar na internet
+professor, profissional que ensina e orienta os estudantes
+cozinha, cômodo da casa destinado ao preparo de alimentos
+gato, felino doméstico popular como animal de estimação
+relógio, instrumento utilizado para medir e indicar o tempo
+cinema, espaço público destinado à exibição de filmes
