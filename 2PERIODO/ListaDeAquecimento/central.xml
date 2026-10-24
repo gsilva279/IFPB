@@ -1,0 +1,30 @@
+<CentralDeInformacoes>
+  <todosOsJogadores>
+    <Jogador>
+      <nome>Kevin</nome>
+      <sexo>FEMININO</sexo>
+      <cpf>11111111111</cpf>
+      <email>g@gmail.com</email>
+    </Jogador>
+  </todosOsJogadores>
+  <todasAsPalavras>
+    <Palavra>
+      <palavra>bola</palavra>
+      <dica>para jogar</dica>
+      <dataCadastro>2026-10-04</dataCadastro>
+      <dificuldade>DIFICIL</dificuldade>
+    </Palavra>
+    <Palavra>
+      <palavra>computador</palavra>
+      <dica>maquina usada para programar</dica>
+      <dataCadastro>2026-10-04</dataCadastro>
+      <dificuldade>MEDIO</dificuldade>
+    </Palavra>
+    <Palavra>
+      <palavra>paralelepipedo</palavra>
+      <dica>tipo de pedra usada em ruas</dica>
+      <dataCadastro>2026-10-04</dataCadastro>
+      <dificuldade>DIFICIL</dificuldade>
+    </Palavra>
+  </todasAsPalavras>
+</CentralDeInformacoes>

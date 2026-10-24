@@ -1,0 +1,13 @@
+5. Adicione ao Banco um método chamado salvar conta, que deve receber como parâmetro de entrada um
+objeto Conta Corrente e retornar um valor booleano. O método salvar conta deve adicionar a Conta Corrente
+recebida como parâmetro de entrada no array de contas salvas, na próxima posição vazia (você pode usar
+o atributo quantidade de contas salvas para “inferir” qual é o índice vazio). Mas, não deve ser possível
+salvar a conta se já houver outra com o mesmo número. Também não deve ser possível salvar a conta
+se o array de contas salvas já estiver “cheio”. O método retorna true se a operação de salvar foi bem
+sucedida e falso no caso contrário.
+
+6. Adicione ao Banco um método chamado recuperar conta, que deve receber como parâmetro de entrada
+uma String, representando um número da Conta, e deve retornar um objeto do tipo Conta Corrente. O método
+procura no vetor de contas salvas a Conta Corrente com número igual ao valor recebido como parâmetro
+de entrada. Caso a encontre, o método recuperar conta retornará a conta encontrada. Caso não encontre,
+o método deve retornar null.
